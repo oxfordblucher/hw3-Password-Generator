@@ -28,7 +28,7 @@ function generatePassword() {
 // While loop to ensure user is reprompted if they don't pick the right # of characters.
   while (!submitted) {
   var pwdLngth = Number(window.prompt("# of characters in your new password (pick a # between 8 and 128)"));
-  if(isNaN(pwdLngth) || pwdLngth <= 8 || pwdLngth >= 128) {
+  if(isNaN(pwdLngth) || pwdLngth < 8 || pwdLngth > 128) {
     alert("Please pick a # between 8 and 128.");
     submitted = false;
   }else{
